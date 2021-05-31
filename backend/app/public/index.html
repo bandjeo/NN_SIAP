@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/public/light_sketchy.css">
+        <link rel="stylesheet" href="https://bootswatch.com/_vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/public/index.css">
+        <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico"/>
+        <!-- <script src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script> -->
+        <script src="/public/string-similarity.min.js"></script>
+        <title>Recipe dGenerator</title>
+    </head>
+    <body>
+        <div id="searchTab" class="container-fluid py-5">
+            <div class="row">
+                <div class="col-12">
+                    <form class="bs-component col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-xs-12" autocomplete="off">
+                        <div class="form-group">
+                            <div class="autocomplete" style="width:100%;">
+                                <input type="text" class="form-control" placeholder="Ingredient name" id="ingredient">
+                            </div>
+                        </div>
+                      <button id="addbtn" style="display: none;" class="col-lg-4 offset-lg-4 col-md-6 offset-md-2 col-sm-10 offset-sm-1 col-xs-12 btn btn-primary my-4" role="button" tabindex="0">Add</button>
+                    </form>
+                </div>
+                <div class="col-12 py-5">
+                    <div class="list-group col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-xs-12" id="itemgroup"></div>
+                </div>
+                <div class="col-12 py-5 h-50">
+                </div>
+                <div id="generate">
+                    <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-xs-12">
+                        <button class="col-lg-4 offset-lg-4 col-md-6 offset-md-2 col-sm-10 offset-sm-1 col-xs-12 btn btn-success p-4 my-2" role="button" tabindex="0" id="generatebtn">Generate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="opacity: 0; display: none;" id="waitTab" class="w-100 h150">
+            <img src="/public/1.jpg" id="plate" alt="BG" class="plate">
+            <img src="/public/2.png" id="lobster" alt="LS" class="lobster">
+        </div>
+        
+        <div style="opacity: 0; display: none;" id="instructionsTab" class="container-fluid py-5">
+            <div class="row">
+                <div class="col-12 align-items-top justify-content-center d-flex fs">
+                    <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12" >
+                        <div  class="my-5">
+                            <h1>Ingredients:</h1>
+                            <div id="ingredients_container">
+                            </div>
+                        </div>
+                        <br class="mx-5">
+                        <div  class="my-5">
+                            <h1>Instructions:</h1>
+                            <p id="instruction_container" class="my-3">
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/public/axios.min.js"></script>
+    <script src="/public/index.js"></script>
+    <script src="/public/autocomplete.js"></script>
+    <script src="/public/generate.js"></script>
+</html>
